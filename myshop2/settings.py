@@ -40,10 +40,12 @@ INSTALLED_APPS = [
     'shop',
     'cart',
     'orders',
+    'paypal.standard.ipn',
     'payment',
     'coupons',
     'rosetta',
     'localflavor',
+    'braintree',
 ]
 
 MIDDLEWARE = [
@@ -161,4 +163,6 @@ REDIS_HOST = 'localhost'
 REDIS_PORT = 6379
 REDIS_DB = 1
 
-
+# django-paypal settings
+PAYPAL_RECEIVER_EMAIL = 'mypaypalemail@myshop.com'
+PAYPAL_TEST = True

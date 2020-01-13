@@ -25,6 +25,7 @@ urlpatterns = i18n_patterns(
     url(_('cart/'), include('cart.urls', namespace='cart')),
     url(_('orders/'), include('orders.urls', namespace='orders')),
     url(_('payment/'), include('payment.urls', namespace='payment')),
+    url(r'^paypal/', include('paypal.standard.ipn.urls')),
     url(_('coupons/'), include('coupons.urls', namespace='coupons')),
     url('rosetta/', include('rosetta.urls')),
     url('', include('shop.urls', namespace='shop')),
